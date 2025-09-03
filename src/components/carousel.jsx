@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 
 import Delivery from "../../public/delivery bebidas.png";
-import Portfolio from "../../public/portfolio.png";
-import PSG from "../../public/LP-PSG.png";
 import Finances from "../../public/finances.png";
 import Dark from "../../public/loginDark.png";
+import Fisioplastic from "../../public/Fisioplastic.png";
+import Compostura from "../../public/Compostura.png";
 
 import CardCarousel from "./cardCarousel"
 
@@ -28,10 +28,10 @@ export default () => {
 		    infiniteLoop={true}
       >
         <CardCarousel img={Delivery} link={'https://allandrs.github.io/delivery_bebidas/'}/>
-        {/* <CardCarousel img={Portfolio} link={'https://allandrs.github.io/portfolio-html-css/'}/> */}
-        {/* <CardCarousel img={PSG} link={'https://allandrs.github.io/site-futebol/'}/> */}
         <CardCarousel img={Finances} link={'https://allandrs.github.io/sistema-controle-financeiro/'}/>
         <CardCarousel img={Dark} link={'https://allandrs.github.io/tela-login-dark/'}/>
+        <CardCarousel img={Fisioplastic} link={'https://fisioplastic.drisaagency.com/'}/>
+        <CardCarousel img={Compostura} link={'https://clinicacompostura.drisaagency.com/'}/>
       </ItemsCarousel>
     </div>
   );

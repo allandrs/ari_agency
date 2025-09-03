@@ -23,9 +23,6 @@ export default function Footer() {
                     <div className="flex gap-8">
                             <img className="h-20" src={Logo} alt="logo"/>
                             <div className=" md:visible top-[540px] right-[30px] md:top-[540px] md:right-[50px]  rounded-full w-12 h-12 flex justify-center items-center">
-                        <a href="#">       
-                            <img src={Arrow} className="rotate-[270deg]" alt="seta para voltar para início" />
-                        </a>
                     </div>
                     </div>
 
@@ -75,7 +72,7 @@ export default function Footer() {
 
                 <div className="footerfooter flex justify-center items-center p-2 mt-6 border-solid border-gray-500 border-t-[0.1px] border-opacity-30">
                     <div>
-                        <h1 className="text-xs text-gray-500 flex-wrap mx-2">Desenvolvido por Agência DRISA | Todos os direitos reservados © | Políticas de privacidade  </h1>
+                        <h1 className="text-xs text-gray-500 flex-wrap mx-2">Desenvolvido por Agência DRISA © | Políticas de privacidade  </h1>
                     </div>
                     
                 </div>
