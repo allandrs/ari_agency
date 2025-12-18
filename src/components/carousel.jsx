@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 
 import Delivery from "../../public/delivery bebidas.png";
@@ -11,7 +11,23 @@ import CardCarousel from "./cardCarousel"
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [cards, setCards] = useState(2);
   const chevronWidth = 40;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCards(1); // mobile
+      } else {
+        setCards(2); // desktop
+      }
+    };
+
+    handleResize(); // roda ao carregar
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
 
   return (
@@ -19,14 +35,14 @@ export default () => {
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={2}
+        numberOfCards={cards}
         gutter={20}
-        leftChevron={<button className='bg-white rounded-full w-6'>{'<'}</button>}
-        rightChevron={<button className='bg-white rounded-full w-6'>{'>'}</button>}
+        leftChevron={<button className="bg-white rounded-full w-6">{'<'}</button>}
+        rightChevron={<button className="bg-white rounded-full w-6">{'>'}</button>}
         outsideChevron
         chevronWidth={chevronWidth}
-		    infiniteLoop={true}
-      >
+        infiniteLoop
+        >
         <CardCarousel img={Delivery} link={'https://allandrs.github.io/delivery_bebidas/'}/>
         <CardCarousel img={Finances} link={'https://allandrs.github.io/sistema-controle-financeiro/'}/>
         <CardCarousel img={Dark} link={'https://allandrs.github.io/tela-login-dark/'}/>

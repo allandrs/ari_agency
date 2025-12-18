@@ -48,71 +48,59 @@ const Services = forwardRef((props, ref) => {
   
   return (
       <>
-        <div id="services" className="bg-white h-[148rem] md:h-[60rem] w-full relative flex flex-col items-center">
-          {/* <div className="flex justify-center mx-2 md:mx-4 mt-16" ref={compRef}>
-            <h1 className="font-bold pt-6 text-nowrap text-[#0d1537]">
-              <span className="text-[#06d2dd] ">Empresas</span> que estão crescendo
-              conosco
-            </h1>
-          </div>
-          <div className="flex gap-2 md:gap-32 mt-12 justify-center mx-2 md:mx-4">
-            <img src={Vilabeer} alt="logo" className="h-20 rounded-full"/>
-            
-            <img src={Elmiz} alt="logo" className="h-20 rounded-full bg-contain" />
-                      
-            <img src={Darkz} alt="logo" className="h-20 rounded-full" />
-            
-            <img src={Devfinance} alt="logo" className="h-20 rounded-full" />
-            
-          </div> */}
+        <div id="services" className="bg-white h-[148rem] md:h-[60rem] w-full relative flex flex-col items-center justify-center">
   
-          <div className="flex flex-col items-center pt-16 mx-2 md:mx-4 mt-10">
-            <h1 className="text-2xl font-extrabold text-[#0d1537] text-center">
-            O que fazemos para<span className="text-[#06d2dd]"> destacar </span>seu site na internet
-            </h1>
-            <br />
+          <div className="flex flex-col md:w-[1240px] items-center align-middle justify-center place-items-center">
+
+            <div className="flex flex-col items-center mx-2 md:mx-4 ">
+              <h1 className="text-2xl font-extrabold text-[#0d1537] text-center">
+              O que fazemos para<span className="text-[#06d2dd]"> destacar </span>seu site na internet
+              </h1>
+              <br />
+            </div>
   
-          </div>
-  
-          <div className="mx-4 md:w-[48rem]">
-            <div className="grid gap-5 grid-cols-1 md:grid-cols-3 place-items-center mt-10">
-              <Card
-                titulo="Responsividade"
-                img={Responsive}
-                texto1="Mais de 60% dos acessos à internet são feitos por dispositivos móveis. Se o seu site não está perfeitamente ajustado para todos os tamanhos de tela, você está perdendo visitantes e vendas."
-              />
-              <Card
-                titulo="SEO"
-                img={SEO}
-                texto1="Seu site pode ter potencial, mas sem o SEO correto, ele fica invisível nas pesquisas do google. A otimização de SEO irá atrair o público certo gerando mais conversões."
-                // texto2="Corte custos Aumente a produtividade \n continuação"
-                // texto3="Corte custos Aumente a produtividade \n continuação"
-                // texto4="Corte custos Aumente a produtividade \n continuação"
+            <div className="flex flex-col mx-4 md:w-[48rem]">
+              <div className="grid gap-5 grid-cols-1 md:grid-cols-3 place-items-center mt-10">
+                <Card
+                  titulo="Responsividade"
+                  img={Responsive}
+                  texto1="Mais de 60% dos acessos à internet são feitos por dispositivos móveis. Se o seu site não está perfeitamente ajustado para todos os tamanhos de tela, você está perdendo visitantes e vendas."
                 />
                 <Card
-                titulo="Performance"
-                img={Website}
-                texto1="Cada segundo conta! Sites lentos frustram usuários e, pior ainda, diminuem suas vendas. A otimização de performance garante que seu site carregue em tempo recorde, oferecendo uma navegação rápida e fluida para seus clientes."
-                
-              />
-              <Card
-                titulo="Design"
-                img={Design}
-                texto1="Navegação simples e agradável para manter seus visitantes por mais tempo, focado na experiência do usuário (UX), assim como um bom design de interface do usuário (UI) é muito importante no sucesso na captação de clientes."
-              />
-              <Card
-                titulo="Integração de APIs"
-                img={Api}
-                texto1="Com a integração de APIs, você pode conectar sua plataforma a diversos serviços e ferramentas externas, automatizando processos e criando uma experiência mais fluida e eficiente para seus usuários."
-              />
-              <Card
-                titulo="Suporte e manutenção"
-                img={Manutencao}
-                texto1="Para que sua loja ou site estejam sempre atualizados, funcionais e seguros, oferecemos suporte técnico contínuo. Desde a solução de problemas até melhorias e atualizações, cuidamos para que sua loja virtual esteja sempre pronta para vender mais!"
-                man
-              />
+                  titulo="SEO"
+                  img={SEO}
+                  texto1="Seu site pode ter potencial, mas sem o SEO correto, ele fica invisível nas pesquisas do google. A otimização de SEO irá atrair o público certo gerando mais conversões."
+                  // texto2="Corte custos Aumente a produtividade \n continuação"
+                  // texto3="Corte custos Aumente a produtividade \n continuação"
+                  // texto4="Corte custos Aumente a produtividade \n continuação"
+                  />
+                  <Card
+                  titulo="Performance"
+                  img={Website}
+                  texto1="Cada segundo conta! Sites lentos frustram usuários e, pior ainda, diminuem suas vendas. A otimização de performance garante que seu site carregue em tempo recorde, oferecendo uma navegação rápida e fluida para seus clientes."
+                  
+                />
+                <Card
+                  titulo="Design"
+                  img={Design}
+                  texto1="Navegação simples e agradável para manter seus visitantes por mais tempo, focado na experiência do usuário (UX), assim como um bom design de interface do usuário (UI) é muito importante no sucesso na captação de clientes."
+                />
+                <Card
+                  titulo="Integração de APIs"
+                  img={Api}
+                  texto1="Com a integração de APIs, você pode conectar sua plataforma a diversos serviços e ferramentas externas, automatizando processos e criando uma experiência mais fluida e eficiente para seus usuários."
+                />
+                <Card
+                  titulo="Suporte e manutenção"
+                  img={Manutencao}
+                  texto1="Para que sua loja ou site estejam sempre atualizados, funcionais e seguros, oferecemos suporte técnico contínuo. Desde a solução de problemas até melhorias e atualizações, cuidamos para que sua loja virtual esteja sempre pronta para vender mais!"
+                  man
+                />
+              </div>
             </div>
+
           </div>
+          
         </div>
       </>
   );

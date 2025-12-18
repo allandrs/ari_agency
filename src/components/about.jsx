@@ -1,4 +1,3 @@
-import React from "react";
 import { useImperativeHandle, forwardRef, useRef } from "react";
 
 import Aboutus from "../../public/undraw_building_websites_i78t.svg"
@@ -14,8 +13,8 @@ const About = forwardRef((props, ref) => {
 
     return (
         <>
-            <div id="about" className="flex h-[950px]  md:h-[600px] bg-[#0b112b]" ref={compRef}> 
-                <div className="mx-auto px-8 w-[1440px] flex flex-col md:flex-row text-left">
+            <div id="about" className="flex items-center justify-center h-[950px]  md:h-[600px] bg-[#0b112b]" ref={compRef}> 
+                <div className=" px-6 w-[1240px] flex flex-col md:flex-row  items-center py-10 text-left">
                     
                     <div className="md:w-1/2 flex flex-col justify-center pt-2">  
                         <div>

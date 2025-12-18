@@ -33,20 +33,20 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="bg-[#0b112b] relative min-h-[440px] md:min-h-[600px] w-full place-items-center">
+        <div className="bg-[#0b112b] relative max-h-[900px] md:min-h-[600px] w-{full} place-items-center">
           <img
               src={softdeveloper}
               className="absolute img-header opacity-[.2] invisible md:visible "
               alt=""
             />
 
-          <div className="flex max-w-[1440px] w-full mx-auto h-15 relative  px-4 py-2 justify-between shadow-2xl items-center bg-contain border-none">
+          <div className="flex max-w-[1240px] w-full mx-auto h-15 relative  px-4 py-2 justify-between shadow-2xl items-center bg-contain border-none">
             
             <a href="/" className="flex-initial ml-1 md:ml-3">
               <img
+                className="h-36"
                 src={Logo}
                 alt="logo"
-                className="flex w-[115px] items-start"
               />
             </a>
 
@@ -124,7 +124,7 @@ const Header = () => {
 
           </div>
 
-          <div className="divHeader max-w-[1440px] w-full mx-auto h-full relative">
+          <div className="divHeader max-w-[1240px] w-full mx-auto h-full relative">
 
             <img
               src={verticalsdeveloper}

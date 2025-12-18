@@ -21,9 +21,9 @@ export default function Processos() {
 
   return (
     <>
-      <div id="comofunciona" className="flex  w-full h-[1600px] md:h-[1000px] justify-center bg-[white] relative mb-24 md:mb-14 ">
-        <div className="w-[800px] bg-gradient-to-r from-[#65b4ff] via-[#d5eced] to-[#c2ebed] rounded-xl mt-6 mx-2">
-          <div className="flex justify-center items-center shrink-0 gap-4 text-4xl mt-8 text-center">
+      <div id="comofunciona" className="flex  w-full h-[1700px] md:h-[1050px] justify-center bg-[white] relative align-middle">
+        <div className="w-[800px] bg-gradient-to-r from-[#65b4ff] via-[#d5eced] to-[#c2ebed] rounded-xl my-16 mx-2 justify-center items-center align-middle">
+          <div className="flex justify-center items-center align-middle shrink-0 gap-4 text-4xl mt-8 text-center">
             <div className="invisible">di</div>
             <h1 className="text-3xl md:text-4xl">Como funciona</h1>
             <img src={Build} className="h-10 flex-none" alt="" />
