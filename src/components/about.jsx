@@ -1,46 +1,82 @@
 import { useImperativeHandle, forwardRef, useRef } from "react";
+import Aboutus from "../../public/undraw_building_websites_i78t.svg";
 
-import Aboutus from "../../public/undraw_building_websites_i78t.svg"
+const STATS = [
+  { value: "50+", label: "Projetos entregues" },
+  { value: "100%", label: "Responsivos" },
+  { value: "24h", label: "Suporte pós-entrega" },
+];
 
 const About = forwardRef((props, ref) => {
+  const compRef = useRef();
 
-    const compRef = useRef();
-    useImperativeHandle(ref, () => ({
-      scrollIntoView: () => {
-        compRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-        }
-    })); 
+  useImperativeHandle(ref, () => ({
+    scrollIntoView: () => {
+      compRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+  }));
 
-    return (
-        <>
-            <div id="about" className="flex items-center justify-center h-[950px]  md:h-[600px] bg-[#0b112b]" ref={compRef}> 
-                <div className=" px-6 w-[1240px] flex flex-col md:flex-row  items-center py-10 text-left">
-                    
-                    <div className="md:w-1/2 flex flex-col justify-center pt-2">  
-                        <div>
-                            <h1 className="text-3xl font-bold text-[#06d2dd]">Sobre <span className="text-white">nós</span></h1>
-                        </div>
-                        <p className="text-gray-400 mt-5">
-                        Na <span className="text-[#06d2dd] font-bold">Agência DRISA</span>, somos especialistas em criar lojas virtuais que transformam negócios <span className="text-white font-bold">e impulsionam vendas.</span> Com uma equipe experiente em design e desenvolvimento de sites, entregamos soluções que não apenas impressionam visualmente, mas também são otimizadas para resultados concretos. Seja uma loja virtual poderosa ou um site institucional estratégico,<span className="font-bold text-white"> trabalhamos lado a lado com nossos clientes para entender suas necessidades e criar soluções personalizadas e inovadoras.</span>  
-                        </p>
+  return (
+    <div
+      id="about"
+      className="flex items-center justify-center bg-[#0b112b] py-20"
+      ref={compRef}
+    >
+      <div className="max-w-[1240px] w-full px-4 md:px-6 flex flex-col md:flex-row items-center gap-12">
+        {/* Text side */}
+        <div className="md:w-1/2 flex flex-col">
+          <h2 className="text-3xl md:text-4xl font-extrabold">
+            <span className="text-[#06d2dd]">Sobre</span>{" "}
+            <span className="text-white">nós</span>
+          </h2>
 
-                        <p className="mt-5 text-gray-400 ">
-                            Do planejamento ao lançamento, garantimos que cada detalhe esteja alinhado aos seus objetivos, com foco em performance, escalabilidade e conversão.
-                        </p>
-                    </div>
+          <p className="text-gray-400 mt-6 text-sm leading-relaxed">
+            Na{" "}
+            <span className="text-[#06d2dd] font-bold">Agência DRISA</span>,
+            somos especialistas em criar sites, landing pages e lojas virtuais
+            que transformam negócios{" "}
+            <span className="text-white font-semibold">
+              e impulsionam vendas.
+            </span>{" "}
+            Com uma equipe experiente em design e desenvolvimento, entregamos
+            soluções que não apenas impressionam visualmente, mas também são
+            otimizadas para resultados concretos.
+          </p>
 
-                    <div className="flex items-center justify-center mb-10 md:w-1/2 mt-8 md:mt-0">
-                        <img src={Aboutus} className="relative w-96 animate-pulse" alt="" />
-                    </div>
+          <p className="mt-5 text-gray-400 text-sm leading-relaxed">
+            Do planejamento ao lançamento,{" "}
+            <span className="text-white font-semibold">
+              trabalhamos lado a lado com nossos clientes
+            </span>{" "}
+            para entender suas necessidades e criar soluções personalizadas com
+            foco em performance, escalabilidade e conversão.
+          </p>
 
-                </div>
-            </div>
-            
+          {/* Stats */}
+          <div className="flex gap-8 mt-10">
+            {STATS.map(({ value, label }) => (
+              <div key={label} className="flex flex-col">
+                <span className="text-2xl font-extrabold text-[#06d2dd]">
+                  {value}
+                </span>
+                <span className="text-gray-400 text-xs mt-1">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        </>
-    )
+        {/* Illustration side */}
+        <div className="md:w-1/2 flex items-center justify-center">
+          <img
+            src={Aboutus}
+            className="w-80 md:w-96 opacity-90"
+            alt="Desenvolvimento de sites"
+          />
+        </div>
+      </div>
+    </div>
+  );
+});
 
-})
-
+About.displayName = "About";
 export default About;
-

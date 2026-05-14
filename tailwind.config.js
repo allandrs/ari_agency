@@ -1,3 +1,4 @@
+const { secondary } = require("@material-tailwind/html/theme/base/colors");
 const withMT = require("@material-tailwind/html/utils/withMT");
 module.exports = withMT({
   content: [
@@ -5,6 +6,10 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      colors: {
+        primary:  '#0b112b',
+        secondary: '#06d2dd',        
+      },
       minHeight: {
         '128': '32rem',
       },
